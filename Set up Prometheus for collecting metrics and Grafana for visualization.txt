@@ -1,0 +1,74 @@
+
+
+I)Test Case 1: Installation and Configuration
+
+1)Install Prometheus:
+
+*Choose the appropriate method for your system (e.g., binary, Docker, package manager).
+
+*Create a Prometheus configuration file (prometheus.yml) with target endpoints for metric scraping.
+
+*Start Prometheus with the following command:
+prometheus --config.file=prometheus.yml
+
+2)Install Grafana:
+
+*Choose the appropriate method for your system.
+
+*Access Grafana's web interface and log in.
+
+3)Configuration Verification:
+
+*Open Prometheus web interface (http://prometheus-server:9090) and ensure it's up and running.
+
+*Access the Grafana web interface (http://grafana-server:3000), log in, and verify it's working correctly.
+
+
+II) Test Case 2: Metrics Collection and Visualization
+
+1)Instrument Your Application:
+
+*Integrate Prometheus client libraries or exporters into your application code.
+
+*Ensure your application exposes metrics in a format Prometheus can scrape.
+
+2)Create a Grafana Dashboard:
+
+*Access the Grafana web interface and create a new dashboard.
+
+*Add Prometheus as a data source using the URL where Prometheus is running.
+
+*Design your dashboard with panels to display the metrics you want to monitor.
+
+*Add queries to pull data from Prometheus and visualize it in your panels.
+
+3)Verify Real-time Data:
+
+Monitor your Grafana dashboard and confirm that it displays real-time data from your application and infrastructure.
+
+III)Test Case 3: Alerts and Notifications
+
+1)Create an Alerting Rule in Prometheus:
+
+*Define alerting rules in your Prometheus configuration (prometheus.yml).
+
+2)Configure Alert Notification Channels in Grafana:
+
+*In Grafana, configure alert notification channels (e.g., email, Slack).
+
+*Add notification channels in the Grafana web interface under "Alerting" > "Notification channels."
+
+3)Link Prometheus Alerts to Grafana:
+
+*In Grafana, create alert rules using Prometheus data sources.
+
+*Associate these rules with your panels on the dashboard.
+
+*Define conditions for when an alert should be triggered and how long it should be active.
+
+4)Trigger and Verify Alerts:
+
+*Intentionally trigger the condition specified in your Prometheus alerting rule.
+
+*Verify that an alert is raised and sent through the configured notification channel (e.g., receive an email or Slack message).
+
